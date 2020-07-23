@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Add New ToDo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label position="stacked">ToDo Title</ion-label>
+    <ion-input type="text" [(ngModel)]="todo_title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">ToDo Description</ion-label>
+    <ion-input type="text"[(ngModel)]="todo_description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">ToDo Last Date</ion-label>
+    <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="todo_last_date"></ion-datetime>
+  </ion-item>
+  <ion-button shape="round" expand="block" color="danger" (click)="addToDo()">Add ToDo</ion-button>
+</ion-list>
+</ion-content>
